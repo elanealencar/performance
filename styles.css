@@ -1,0 +1,608 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    overflow: auto;
+}
+
+body {
+    font-family: Inter;
+    margin: 0px;
+    padding: 0px;
+    background-color: #131e3d;
+}
+
+.cabecalho {
+    background-color: #131e3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    height: 40px;
+}
+
+.cabecalho img {
+    width: 300px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-hamburguer .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Texto sobre a imagem inicial*/
+.texto-sobre-imagem {
+    position: absolute;
+    border-radius: 5px;
+    max-width: 80%; /* Limita o texto para não ocupar toda a largura */
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centraliza o texto dentro da div */
+}
+
+.texto-sobre-imagem h1 {
+    color: #cdad7d;
+    font-size: 72px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+}
+
+.texto-sobre-imagem p {
+    color: #eeead6;
+    font-size: 22px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.botao {
+    background-color: #131e3d;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width:250px;
+    text-align: center;
+    display: inline-block;
+}
+
+.botao:hover {
+    background-color: #cdad7d;
+    color: #131e3d;
+}
+
+.menu {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: flex-end;
+
+}
+
+.secao-inicial {
+    justify-content: center; /* Centraliza o conteúdo dentro da seção */
+    align-items: center; /* Alinha verticalmente */
+    
+}
+
+.imagem-background {
+    flex-grow:  1; /* Expande a div de imagem para preencher o espaço disponível */
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Para o texto ficar sobre a imagem */
+    height: 580px; /* Altura fixa da div */
+}
+
+.imagem-background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.texto-sobre-imagem button, .texto-sobre-imagem2 .botao2, .texto-sobre-imagem .botao2 {
+    width: 215px;
+    background-color: #cdad7d;
+    margin-top: 30px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    }
+
+.texto-sobre-imagem .botao2:hover {
+    background-color: white;
+    color: #cdad7d;
+
+}
+
+.botao-assessoria {
+    width: 300px;
+    background-color: #cdad7d;
+    margin-top: 30px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+.servicos, .quem-somos, .formula, .solucoes, .contato {
+    padding: 50px 30px;
+}
+
+.servicos, .assessoria , .solucoes, .quem-somos, .contato, .secao-contato {
+    background-color: #f4f1ec;   
+}
+
+
+.formula {
+    height: 740px;
+    background-image: url('images/research-bg.png');
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+.formula img {
+    width: 100%;
+}
+
+
+.treinamentos, .clientes, .quem-somos {
+    background-color: #131e3d;
+
+}
+
+.servicos h1, .assessoria h1, .solucoes h1 , .contato h1 {
+    color: #131e3d;
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+}
+
+.formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1{
+    color: #cdad7d;
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+}
+
+
+h1, h2 {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 30px;
+}
+
+.secao-servicos, .secao-clientes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais */
+    gap: 10px; /* Espaçamento entre as colunas */
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro de cada coluna */;
+}
+
+.secao-treinamentos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais */
+    gap: 10px; /* Espaçamento entre as colunas */
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro de cada coluna */;
+}
+
+.secao-formula {
+    display: flex; /* Para alinhar as caixas horizontalmente */
+    flex-direction: row;
+    gap: 20px; 
+    justify-content: center;
+    text-align: center; /* Centraliza o texto dentro das caixas */
+    border-radius: 5px;    /* Bordas arredondadas */
+    margin: 20px;
+    padding-top: 50px;
+}
+
+.secao-formula > div {  /* Aplica o estilo individualmente a cada bloco */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para destacar os blocos */
+    flex: 1; /* Faz com que cada bloco tenha o mesmo tamanho */
+    min-width: 250px; /* Define um tamanho mínimo */
+    
+}
+
+.secao-formula > div:hover {
+    background-color: white;  /* Aplica o estilo individualmente a cada bloco */
+}
+
+
+.coluna , .coluna2 {
+    padding-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.secao-servicos .coluna, .secao-treinamentos .coluna {
+    background-color: #eeead6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+
+.secao-servicos .coluna:hover,  .secao-servicos .coluna2:hover, .secao-treinamentos .coluna:hover, .secao-treinamentos .coluna2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
+}
+
+.coluna-solucoes {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+}
+
+.coluna-solucoes div {
+    background-color: white;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.secao-servicos .coluna2, .secao-treinamentos .coluna2 {
+    background-color: #E8D1AE;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+
+.coluna-assessoria {
+    display: flex;
+    gap: 10px;
+}
+
+.check-assessoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+}
+
+.check-assessoria img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.coluna img, .coluna2 img {
+    width: 50px; /* Define o tamanho do ícone */
+    height: 50px;
+    margin-bottom: 10px; /* Espaço entre o ícone e o título */
+    margin-top: 40px;
+    
+}
+
+.coluna h3 , .coluna2 h3, .coluna-assessoria h3, .assessoria h3, .coluna-formula h3, .coluna-solucoes h3, .secao-solucoes h3 {
+    margin: 10px 0; /* Espaçamento entre o título e o texto */
+    font-size: 22px; /* Tamanho do título */
+    color: black;
+}
+
+.check-assessoria p {
+    font-size: 18px;
+}
+
+h3 {
+    color: white;
+}
+
+.coluna p, .coluna2 p, .clientes-card p, .check-assessoria p {
+    font-size: 18px; /* Tamanho do texto */
+    color: #666; /* Cor do texto */
+}
+
+
+
+.secao-assessoria img {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.secao-assessoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    padding: 20px;
+    align-items: center;
+    text-align: center; /* Centraliza o conteúdo dentro de cada coluna */
+    width: auto;   
+}
+
+.coluna-assessoria img {
+    width: 50px;
+    height: 50px;
+}
+
+.coluna-assessoria {
+    display: flex;
+    flex-direction: column;
+}
+
+.quem-somos {
+    color: #666;
+    text-align: center;
+}
+
+.star-icone {
+    height: 30px;
+    width: 30px;
+}
+
+.clientes-card {
+    border: 1px solid #dae0e8;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.clientes-card h3 {
+    color: black;
+}
+
+
+
+.botao2, .botao-assessoria {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-assessoria:hover, .botao2:hover {
+    background-color: #131e3d;
+}
+
+
+.redes img, .redes p {
+    cursor: pointer;
+    color: black;
+}
+
+.redes {
+    margin: 20px;
+}
+
+.redes-nome {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+
+}
+
+.rodape img {
+    width: 20%;
+}
+
+.rodape {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.secao-inicial span {
+    color: #cdad7d;
+}
+
+.text-assessoria {
+    text-align: center;
+    align-items: center;
+}
+
+.text-assessoria p {
+    color: black
+}
+
+.text-assessoria span {
+    font-weight: bold;
+}
+
+.quem-somos-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.quem-somos-img {
+    border-radius: 50%;
+    background-image: url(./images/laila.png);
+    background-size: cover;
+    background-position: initial;
+    width: 150px;
+    height: 150px;
+    border: 2PX solid#131e3d;
+}
+
+.quem-somos-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.clientes {
+    display: none;
+}
+
+.quem-somos-card h3 {
+    color: #131e3d;
+}
+
+.quem-somos-missao p {
+    color: #f4f1ec;
+}
+
+.quem-somos-missao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.missao-card {
+    max-width: 80%;
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+        padding-right: 30px;
+    }
+
+    .menu a {
+        font-size: 18px;
+        padding: 10px;
+
+    }
+
+    .menu.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        position: absolute;
+        top: 70px; /* Ajuste conforme o seu layout */
+        right: 0;
+        background-color: #131e3d;
+        width: auto;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .menu.open a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .menu.open a:hover {
+        background-color: #cdad7d;
+        color: #131e3d;
+        }
+
+    .servicos h1, .assessoria h1, .solucoes h1, .solucoes h1 , .contato h1 {
+        color: #131e3d;
+        font-family: "Libre Baskerville", serif;
+        font-size: 22px;
+    }
+    
+    .formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1{
+        color: #cdad7d;
+        font-family: "Libre Baskerville", serif;
+        font-size: 22px;
+    }
+
+    
+    .imagem-background::before {
+        background-image: url('images/bg_inicial.jpg');
+        opacity: 40%;
+    }
+
+    .texto-sobre-imagem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50%;
+        
+    }    
+    
+    .texto-sobre-imagem h1 {
+        font-size: 56px;
+}
+    .secao-servicos, .secao-treinamentos, .coluna-solucoes{
+        grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas de tamanhos iguais */
+        
+    }
+    .secao-servicos h3 {
+        font-size: 16px;
+    }
+
+    .coluna img, .coluna2 img {
+        width: 30px; /* Define o tamanho do ícone */
+        height: auto;
+    }
+
+    .secao-formula {
+        display: flex; /* Para alinhar as caixas horizontalmente */
+        flex-direction: column;
+    }
+    .formula {
+        height: auto;
+    }
+    .quem-somos-team {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna-solucoes h3, .coluna-solucoes p {
+        font-size: 16px;
+    }
+    
+    .missao-card {
+        font-size: 16px;
+    }
+   
+    .secao-assessoria {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        
+}
+}
+
+
+
