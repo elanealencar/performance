@@ -20,5 +20,6 @@ Este é o projeto de um site institucional para a empresa Performance, que ofere
 
 ## Desenvolvido por:
 
-Elane Alencar - Software Developer [https://www.linkedin.com/in/elanealencar]
-Porttólio [https://portfolio-two-phi-85.vercel.app/]
+Elane Alencar - Software Developer
+[Linkedin] (https://www.linkedin.com/in/elanealencar)
+[Porttólio] (https://portfolio-two-phi-85.vercel.app/)
