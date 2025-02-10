@@ -471,7 +471,7 @@ a {
 
 .quem-somos-img2 {
     border-radius: 50%;
-    background-image: url(./images/tino.jpg);
+    background-image: url(./images/tino.png);
     background-size: cover;
     background-position: initial;
     width: 150px;
@@ -522,7 +522,7 @@ a {
 
 .secao-missao {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -531,10 +531,9 @@ a {
 
 
 .missao-card {
-    width: 100%;
+    height: 100%;
     background-color: #eeead6;
     margin-top: 30px;
-    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
