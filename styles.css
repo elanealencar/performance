@@ -52,7 +52,8 @@ body {
     border-radius: 5px;
     max-width: 40%; /* Limita o texto para não ocupar toda a largura */
     text-align: center; /* Centraliza o texto dentro da div */
-    padding-left: 100px;
+    margin-left: 100px;
+    margin-top: 30px;
     
 }
 
@@ -688,6 +689,7 @@ a {
         padding: 0;
         margin: 0;
         max-width: 100%;
+        margin-top: 20px;
         
     }
 
