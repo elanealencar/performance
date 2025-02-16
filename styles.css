@@ -46,15 +46,14 @@ body {
     background-color: white;
 }
 
-/* Texto sobre a imagem inicial*/
 .texto-sobre-imagem {
     position: absolute;
     border-radius: 5px;
-    max-width: 40%; /* Limita o texto para não ocupar toda a largura */
     text-align: center; /* Centraliza o texto dentro da div */
-    margin-left: 100px;
+    padding-left: 100px;
+    width: 40%;
     margin-top: 30px;
-    
+    background-color: red;    
 }
 
 .texto-sobre-imagem h1 {
@@ -688,8 +687,9 @@ a {
         justify-content: center;
         padding: 0;
         margin: 0;
-        max-width: 100%;
+        width: 100%;
         margin-top: 20px;
+        background-color: red;
         
     }
 
