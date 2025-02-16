@@ -118,6 +118,7 @@ body {
     background-repeat: no-repeat;
     position: relative; /* Para o texto ficar sobre a imagem */
     height: 580px; /* Altura fixa da div */
+    width: 100%;
 }
 
 .imagem-background::before {
@@ -799,6 +800,7 @@ a {
     }
 
     .servicos, .quem-somos, .formula, .solucoes, .contato , .assuntos {
-        padding:50px 0px;
-}
+        padding: 20px 0px;
+        margin: 0px 0px;
+    }
 }
