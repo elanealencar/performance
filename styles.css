@@ -70,6 +70,18 @@ body {
     font-family: "Libre Baskerville", serif;
 }
 
+.formula span p, .treinamentos p, .missao-card p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.secao-assuntos p {
+    font-size: 18px;
+    text-align: center;
+}
+
 
 .botao {
     background-color: #131e3d;
@@ -121,15 +133,33 @@ body {
     background-repeat: no-repeat;
 }
 
-.texto-sobre-imagem button, .texto-sobre-imagem2 .botao2, .texto-sobre-imagem .botao2 {
-    width: 215px;
+.texto-sobre-imagem .botao2 {
+    width: 250px;
     background-color: #cdad7d;
+    color: white;
     margin-top: 30px;
     height: 60px;
     font-weight: bold;
     font-size: 18px;
+    border: none;
     border-radius: 5px;
-    }
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.texto-sobre-imagem a {
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+
+    justify-content: center;  
+}
 
 .texto-sobre-imagem .botao2:hover {
     background-color: white;
@@ -137,18 +167,26 @@ body {
 
 }
 
-.botao-assessoria {
+.botao-resolucao {
     width: 300px;
     background-color: #cdad7d;
+    color: white;   
     margin-top: 30px;
-    height: 60px;
+    height: 50px;
     font-weight: bold;
     font-size: 18px;
     border-radius: 5px;
-
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.servicos, .quem-somos, .formula, .solucoes, .contato {
+.botao-resolucao:hover, .botao2:hover {
+    background-color: #131e3d;
+}
+
+.servicos, .quem-somos, .formula, .solucoes, .contato , .assuntos {
     padding: 50px 30px;
 }
 
@@ -157,13 +195,12 @@ body {
     text-align: center;
 }
 
-.servicos, .assessoria , .solucoes, .quem-somos, .contato, .secao-contato {
+.resolucao , .solucoes, .quem-somos, .contato, .secao-contato, .assuntos {
     background-color: #f4f1ec;   
 }
 
-
 .formula {
-    height: 740px;
+    height: auto;
     background-image: url('images/research-bg.png');
     background-size: cover;
     background-position: center; /* Centraliza a imagem */
@@ -180,18 +217,17 @@ body {
 
 }
 
-.servicos h1, .assessoria h1, .solucoes h1 , .contato h1 {
+.resolucao h1, .solucoes h1 , .contato h1, .assuntos h1{
     color: #131e3d;
     font-family: "Libre Baskerville", serif;
     font-size: 32px;
 }
 
-.formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1{
+.servicos h1, .formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1{
     color: #cdad7d;
     font-family: "Libre Baskerville", serif;
     font-size: 32px;
 }
-
 
 h1, h2 {
     text-align: center;
@@ -218,53 +254,64 @@ h1, h2 {
 .secao-formula {
     display: flex; /* Para alinhar as caixas horizontalmente */
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px; 
     justify-content: center;
     text-align: center; /* Centraliza o texto dentro das caixas */
-    border-radius: 5px;    /* Bordas arredondadas */
     margin: 20px;
     padding-top: 50px;
 }
 
+
 .secao-formula > div {  /* Aplica o estilo individualmente a cada bloco */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     border-radius: 5px; /* Bordas arredondadas */
     padding: 20px; /* Espaçamento interno */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para destacar os blocos */
-    flex: 1; /* Faz com que cada bloco tenha o mesmo tamanho */
-    min-width: 250px; /* Define um tamanho mínimo */
-    
+    flex: 1;
 }
 
-.secao-formula > div:hover {
-    background-color: white;  /* Aplica o estilo individualmente a cada bloco */
+.formula-content, .secao-formula {
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
+.formulas-standart {
+    margin-left: 100px;
+}
 
-.coluna , .coluna2 {
+.formulas-premium {
+    margin-right: 100px;
+}
+
+.formula-domissanitario {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna, .coluna2 {
     padding-bottom: 10px;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
 .secao-servicos .coluna, .secao-treinamentos .coluna {
     background-color: #eeead6;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-origin: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-.secao-servicos .coluna2, .secao-treinamentos .coluna2 {
-    background-color: #E8D1AE;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center;
-}
-
-.secao-servicos .coluna:hover,  .secao-servicos .coluna2:hover, .secao-treinamentos .coluna:hover, .secao-treinamentos .coluna2:hover {
+.secao-servicos .coluna:hover, .secao-treinamentos .coluna:hover, .secao-treinamentos .coluna2:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
 }
 
-.coluna-solucoes {
+.coluna-solucoes{
     font-size: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -287,40 +334,93 @@ h1, h2 {
 }
 
 
-
-.coluna-assessoria {
-    display: flex;
-    gap: 10px;
+.coluna-solucoes span p {
+    font-size: 16px;
 }
 
-.check-assessoria {
+.coluna-assuntos {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    height: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.coluna-assuntos-div {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coluna-assuntos p {
+    margin: 10px;
+}
+
+
+.coluna-AFE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.coluna-AFE > div {
+    background-color: white;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.coluna-resolucao, .coluna-garantia {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+.check-resolucao, .check-garantia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex:1;
+    flex:1;    
+    }
+
+.check-garantia{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.check-assessoria img {
+.check-resolucao img, .check-garantia img, .coluna img, .coluna2 img, .coluna-solucoes img {
     width: 50px;
     height: 50px;
-
 }
 
 .coluna img, .coluna2 img {
-    width: 50px; /* Define o tamanho do ícone */
-    height: 50px;
     margin-bottom: 10px; /* Espaço entre o ícone e o título */
     margin-top: 40px;
     
 }
 
-.coluna h3 , .coluna2 h3, .coluna-assessoria h3, .assessoria h3, .coluna-formula h3, .coluna-solucoes h3, .secao-solucoes h3 {
+.coluna h3 , .coluna2 h3, .coluna-resolucao h3, .resolucao h3, .coluna-formula h3, .coluna-solucoes h3, .secao-solucoes h3, .coluna-assuntos h3 {
     margin: 10px 0; /* Espaçamento entre o título e o texto */
     font-size: 22px; /* Tamanho do título */
     color: black;
 }
 
-.check-assessoria p {
+.check-garantia p {
     font-size: 18px;
 }
 
@@ -328,33 +428,36 @@ h3 {
     color: white;
 }
 
-.coluna p, .coluna2 p, .clientes-card p, .check-assessoria p {
+.coluna p, .coluna2 p, .clientes-card p, .check-resolucao p, .coluna-solucoes p {
     font-size: 18px; /* Tamanho do texto */
     color: #666; /* Cor do texto */
 }
 
-
-
-.secao-assessoria img {
+.secao-resolucao img {
     border-radius: 10px;
     width: 80%;
 }
 
-.secao-assessoria {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
+.secao-resolucao {
+    display: flex;
+    flex-direction: row; 
     padding: 20px;
+    margin: 20px;
     align-items: center;
     text-align: center; /* Centraliza o conteúdo dentro de cada coluna */
-    width: auto;   
 }
 
-.coluna-assessoria img {
+.coluna-resolucao img {
     width: 50px;
     height: 50px;
 }
 
-.coluna-assessoria {
+.coluna-resolucao {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-resolucao {
     display: flex;
     flex-direction: column;
 }
@@ -377,27 +480,6 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-.clientes-card h3, .missao-card h3 {
-    color: black;
-}
-
-
-
-.botao2, .botao-assessoria {
-    padding: 10px;
-    font-size: 1.2rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.botao-assessoria:hover, .botao2:hover {
-    background-color: #131e3d;
-}
-
-
 .redes img, .redes p, .redes a {
     cursor: pointer;
     color: black;
@@ -412,7 +494,10 @@ h3 {
     gap: 20px;
     margin: 20px;
     align-items: center;
+}
 
+.redes-nome a:hover {
+    font-weight: bold;
 }
 
 .rodape img {
@@ -438,16 +523,16 @@ a {
     font-size: 28px;
 }
 
-.text-assessoria {
+.text-resolucao {
     text-align: center;
     align-items: center;
 }
 
-.text-assessoria p {
+.text-resolucao p {
     color: black
 }
 
-.text-assessoria span {
+.text-resolucao span {
     font-weight: bold;
 }
 
@@ -455,7 +540,9 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: flex-start;
+    margin-left: 100px;
+    margin-right: 100px;
+    
 }
 
 .quem-somos-img1 {
@@ -466,6 +553,7 @@ a {
     width: 150px;
     height: 150px;
     border: 2PX solid#131e3d;
+    margin-top: 10px;
 }
 
 
@@ -477,6 +565,7 @@ a {
     width: 150px;
     height: 150px;
     border: 2PX solid#131e3d;
+    margin-top: 10px;
 }
 
 .quem-somos-card {
@@ -516,31 +605,21 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-
-.secao-missao {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.secao-missao{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    border: 1px solid white;
+    margin: 100px;
+    border-radius: 10px;
 }
 
 
 .missao-card {
-    height: 100%;
-    background-color: #eeead6;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.missao-visao {
-    width: 100%;
-    height: auto;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 
@@ -587,13 +666,13 @@ a {
         color: #131e3d;
         }
 
-    .servicos h1, .assessoria h1, .solucoes h1, .solucoes h1 , .contato h1 {
+    .resolucao h1, .solucoes h1 , .contato h1 , .assuntos h1 {
         color: #131e3d;
         font-family: "Libre Baskerville", serif;
         font-size: 22px;
     }
     
-    .formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1{
+    .servicos h1, .formula h1, .treinamentos h1 , .clientes h1, .quem-somos h1 {
         color: #cdad7d;
         font-family: "Libre Baskerville", serif;
         font-size: 22px;
@@ -617,8 +696,8 @@ a {
     .texto-sobre-imagem h1 {
         font-size: 56px;
 }
-    .secao-servicos, .secao-treinamentos, .coluna-solucoes{
-        grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas de tamanhos iguais */
+    .secao-servicos, .secao-treinamentos, .coluna-assuntos {
+        grid-template-columns: repeat(2, 1fr);
         
     }
     .secao-servicos h3 {
@@ -633,48 +712,77 @@ a {
     .secao-formula {
         display: flex; /* Para alinhar as caixas horizontalmente */
         flex-direction: column;
+        margin: 40px;
     }
+
     .formula {
         height: auto;
     }
-    .quem-somos-team {
+    
+    .quem-somos-team, .coluna-solucoes, .coluna-assuntos {
         grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    .coluna-solucoes h3, .coluna-solucoes p {
+    .coluna-solucoes p, .text-resolucao p, .secao-formula p, .missao-card p {
         font-size: 16px;
     }
     
-    .missao-card {
-        font-size: 16px;
+    .secao-resolucao {
+        flex-direction: column;    
     }
-   
-    .secao-assessoria {
-        grid-template-columns: 1fr; 
-        padding: 20px;
-        
-}
 
-.secao-servicos .coluna, .secao-treinamentos .coluna {
-    background-color: #E8D1AE;
-    padding: 10px;
-}
+    .secao-servicos .coluna, .secao-treinamentos .coluna {
+        padding: 10px;
+    }
 
 
-.secao-servicos .coluna2, .secao-treinamentos .coluna2 {
-    background-color: #E8D1AE;
-    padding: 10px;
-}
+    .secao-servicos .coluna2, .secao-treinamentos .coluna2 {
+        background-color: #E8D1AE;
+        padding: 10px;
+    }
 
-.coluna:hover, .coluna2:hover {
-    background-color: #eeead6;
-}
+    .coluna:hover, .coluna2:hover {
+        background-color: #eeead6;
+    }
 
-.secao-missao {
-    display: grid;
-    grid-template-columns: 1fr;   
+    .secao-missao {
+    margin: 20px;
+    }
 
-}
+    .check-resolucao img , .check-garantia img {
+        width: 40px;
+        height: 40px;
+    }
 
+    .coluna-garantia {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
+    .coluna-assuntos {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px;
+    }
+
+    
+    .formula-content{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .formulas-standart {
+        margin-left: 0px;
+    }
+
+    .formulas-premium {
+        margin-right: 0px;
+    }
+
+    .secao-contato {
+        display: flex;
+        justify-content: center;
+    }
 }
