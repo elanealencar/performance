@@ -50,11 +50,10 @@ body {
 .texto-sobre-imagem {
     position: absolute;
     border-radius: 5px;
-    max-width: 80%; /* Limita o texto para não ocupar toda a largura */
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    max-width: 40%; /* Limita o texto para não ocupar toda a largura */
     text-align: center; /* Centraliza o texto dentro da div */
+    padding-left: 100px;
+    
 }
 
 .texto-sobre-imagem h1 {
@@ -110,11 +109,10 @@ body {
 .secao-inicial {
     justify-content: center; /* Centraliza o conteúdo dentro da seção */
     align-items: center; /* Alinha verticalmente */
-    
 }
 
 .imagem-background {
-    flex-grow:  1; /* Expande a div de imagem para preencher o espaço disponível */
+    flex-grow: 1;
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -154,17 +152,15 @@ body {
 
 .texto-sobre-imagem a {
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     align-items: center;
     text-align: center;
-
     justify-content: center;  
 }
 
 .texto-sobre-imagem .botao2:hover {
     background-color: white;
     color: #cdad7d;
-
 }
 
 .botao-resolucao {
@@ -628,6 +624,11 @@ a {
         display: none;
     }
 
+    
+    .cabecalho img {
+        width: 200px;
+    }
+
     .menu-hamburguer {
         display: flex;
         padding-right: 30px;
@@ -678,24 +679,35 @@ a {
         font-size: 22px;
     }
 
-    
-    .imagem-background::before {
-        background-image: url('images/bg_inicial.jpg');
-        opacity: 40%;
-    }
-
     .texto-sobre-imagem {
         display: flex;
         flex-direction: column;
+        text-align: center;
         justify-content: center;
-        align-items: center;
-        padding-left: 50%;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
         
-    }    
+    }
+
+    .imagem-background::before {
+        background-image: url('images/bg_inicial.jpg');
+        opacity: 30%;
+    }
+
     
     .texto-sobre-imagem h1 {
-        font-size: 56px;
-}
+        font-size: 46px;    
+    }
+
+    .texto-sobre-imagem span {
+        font-size: 24px;
+    }
+
+    .texto-sobre-imagem p {
+        font-size: 20px;     
+    }
+
     .secao-servicos, .secao-treinamentos, .coluna-assuntos {
         grid-template-columns: repeat(2, 1fr);
         
@@ -785,4 +797,8 @@ a {
         display: flex;
         justify-content: center;
     }
+
+    .servicos, .quem-somos, .formula, .solucoes, .contato , .assuntos {
+        padding:50px 0px;
+}
 }
