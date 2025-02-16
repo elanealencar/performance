@@ -384,9 +384,9 @@ h1, h2 {
 .coluna-resolucao, .coluna-garantia {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    flex: 1;
+    gap: 30px;
+    
 }
 
 
