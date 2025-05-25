@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Performance é uma empresa de consultoria especializada em formulações e Soluções inteligentes para produtos farmacêuticos, domissanitários e cosméticos.">
+    <meta name="keywords" content="cosméticos, saneantes, consultoria, treinamento, produtos biotecnológicos, anvisa">
+    <title>Performance</title>
+    <link href="./styles.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
+</head>
+
+<body class="overflow-auto font-inter m-0 p-0 bg-[#131e3d]">
+    <!-- Cabeçalho -->
+    <header class="flex items-center justify-between py-10 h-10 p-4">
+        <div class="logo">
+            <img src="../images/performance_logo_horizontal-light_transparent.svg" alt="Logo da Performance" class="w-[300px]" />
+        </div>
+        <nav id="menu" class="hidden font-bold gap-6 justify-end md:flex ">
+            <a href="#nossos-servicos" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+            hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">NOSSOS SERVIÇOS</a>
+            <a href="#quem-somos" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+            hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">QUEM SOMOS</a>
+            <a href="#contato" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+            hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">CONTATO</a>
+        </nav>
+
+        <div id="menu-hamburguer" class="flex flex-col gap-1.5 cursor-pointer md:hidden">
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+        </div>
+    </header>
+
+    <!-- Seção Inicial -->
+    <section class="flex justify-center items-center">
+        <div class="relative w-full h-[580px] bg-cover bg-center bg-no-repeat bg-[url('../images/bg_inicial.jpg')] md:bg-[url('../images/bg-2.png')]">
+            <div class="absolute inset-0 bg-black/50 md:bg-transparent"></div>
+
+            <div class="relative z-10 flex flex-col items-center justify-center text-center h-full max-w-full md:max-w-[50%]">
+                <h1 class="text-[#cdad7d] text-5xl font-libre md:text-7xl">Performance</h1>
+                <p class="text-[#cdad7d] text-3xl font-libre mt-12 mb-4">
+                    <span>Consultoria Especializada</span>
+                </p>
+                <p class="text-white text-2xl font-libre mt-1 md:max-w-[80%]">Soluções inteligentes para indústria cosmética e domissanitários</p>
+                <a href="#nossos-servicos" class="mt-8">
+                    <div class="w-[250px] h-[60px] bg-[#cdad7d] text-[#f4f1ec] font-bold text-lg rounded flex items-center justify-center hover:bg-white hover:text-[#cdad7d] transition-colors duration-300">
+                    SAIBA MAIS
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nossos Serviços -->
+<section id="nossos-servicos" data-aos="fade" data-aos-duration="1000" data-aos-delay="50" class="px-4 py-12 ">
+  <h1 class="text-3xl md:text-4xl font-libre text-[#cdad7d] text-center font-bold mb-10">NOSSOS SERVIÇOS</h1>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 text-center px-4">
+        <div class="bg-[#eeead6] rounded shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl flex flex-col items-center pb-12">
+            <img src="../images/icon-problema.png" alt="Ícone" class="w-[30px] md:w-[50px] mt-10 mb-4">
+            <h3 class="text-[18px] md:text-[22px] text-black font-semibold">RESOLUÇÃO DE PROBLEMAS TÉCNICOS</h3>
+        </div>
+
+        <div class="bg-[#eeead6] rounded shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl flex flex-col items-center pb-12">
+            <img src="../images/icon-treinamento.png" alt="Ícone" class="w-[30px] md:w-[50px] mt-10 mb-4">
+            <h3 class="text-[18px] md:text-[22px] text-black font-semibold">TREINAMENTOS</h3>
+        </div>
+
+        <div class="bg-[#eeead6] rounded shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl flex flex-col items-center pb-12">
+            <img src="../images/icon-solucoes.png" alt="Ícone" class="w-[30px] md:w-[50px] mt-10 mb-4">
+            <h3 class="text-[18px] md:text-[22px] text-black font-semibold">SOLUÇÕES PERSONALIZADAS</h3>
+        </div>
+
+        <div class="bg-[#eeead6] rounded shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl flex flex-col items-center pb-12">
+            <img src="../images/icon-note.png" alt="Ícone" class="w-[30px] md:w-[50px] mt-10 mb-4">
+            <h3 class="text-[18px] md:text-[22px] text-black font-semibold">ASSUNTOS REGULATÓRIOS</h3>
+        </div>
+
+        <div class="bg-[#eeead6] rounded shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl flex flex-col items-center pb-12">
+            <img src="../images/icon-check2.png" alt="Ícone" class="w-[30px] md:w-[50px] mt-10 mb-4">
+            <h3 class="text-[18px] md:text-[22px] text-black font-semibold">GESTÃO DA GARANTIA DA QUALIDADE</h3>
+        </div>
+     </div>
+</section>
+
+<!-- seção resolução -->
+
+<section id="resolucao" class="bg-[#f4f1ec] py-12 px-4" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+  <h1 class="text-[#131e3d] text-3xl md:text-4xl font-libre font-bold text-center mb-10">
+    RESOLUÇÃO DE PROBLEMAS TÉCNICOS
+  </h1>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8 mx-4 md:mx-20 text-center">
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img src="../images/relatorios.jpg" alt="aperto_maos" class="rounded-lg w-4/5">
+    </div>
+
+    <div class="w-full md:w-1/2 flex flex-col items-center">
+      <div class="flex flex-col md:flex-row gap-6 w-full justify-center">
+        
+        <div class="flex flex-col items-center flex-1">
+          <img src="../images/icon_list_check.png" alt="icon-check" class="w-12 h-12 md:w-[50px] md:h-[50px] mb-2">
+          <div class="text-black text-base md:text-lg">
+            <p><span class="font-semibold">Não conformidades</span></p>
+            <p>Processos, produtos e regulatório</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center flex-1">
+          <img src="../images/icon_list_check.png" alt="icon-check" class="w-12 h-12 md:w-[50px] md:h-[50px] mb-2">
+          <div class="text-black text-base md:text-lg">
+            <p><span class="font-semibold">Ajustes de Formulação</span></p>
+            <p>Testes envolvendo a formulação e matérias-primas do cliente, objetivando melhorar a performance do produto</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="mt-8">
+        <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Visitei%20o%20site%20da%20Performance%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+          <button type="button" class="w-72 h-12 bg-[#cdad7d] hover:bg-[#131e3d] text-white font-bold text-lg rounded transition-colors">
+            AGENDE UMA REUNIÃO
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Treinamentos -->
+
+    <section class="bg-[#131e3d] py-12 px-4" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#cdad7d] text-3xl md:text-4xl font-serif font-bold text-center mb-4">TREINAMENTOS</h1>
+        <p class="text-white text-lg text-center">Oferecemos treinamentos especializados, focando em boas práticas, qualidade e conformidade regulatória.</p>
+        <p class="text-white text-lg text-center mb-10">Capacite sua equipe com expertise técnica e atualização normativa.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            
+            <div class="bg-[#eeead6] rounded-md shadow-md hover:scale-110 hover:shadow-xl transition-transform duration-300 flex flex-col items-center py-8 px-4">
+                <img src="../images/icon-vendas.png" alt="Ícone" class="w-[50px] h-[50px] mb-4 mt-6 sm:w-[30px] md:w-[50px]">
+                <h3 class="text-black text-lg md:text-xl font-semibold mb-2">Treinamento de equipe comercial/vendas</h3>
+            </div>
+
+            <div class="bg-[#eeead6] rounded-md shadow-md hover:scale-110 hover:shadow-xl transition-transform duration-300 flex flex-col items-center py-8 px-4">
+                <img src="../images/icon-garantia.png" alt="Ícone" class="w-[50px] h-[50px] mb-4 mt-6 sm:w-[30px] md:w-[50px]">
+                <h3 class="text-black text-lg md:text-xl font-semibold mb-2">Treinamento de equipe técnica</h3>
+                <p class="text-sm md:text-base">P&amp;D</p>
+                <p class="text-sm md:text-base">Controle e garantia de qualidade</p>
+            </div>
+
+            <div class="bg-[#eeead6] rounded-md shadow-md hover:scale-110 hover:shadow-xl transition-transform duration-300 flex flex-col items-center py-8 px-4">
+                <img src="../images/icon-treinamento.png" alt="Ícone" class="w-[50px] h-[50px] mb-4 mt-6 sm:w-[30px] md:w-[50px]">
+                <h3 class="text-black text-lg md:text-xl font-semibold mb-2">Treinamento de boas práticas de fabricação</h3>
+            </div>
+
+            <div class="bg-[#eeead6] rounded-md shadow-md hover:scale-110 hover:shadow-xl transition-transform duration-300 flex flex-col items-center py-8 px-4">
+                <img src="../images/icon-lab.png" alt="Ícone" class="w-[50px] h-[50px] mb-4 mt-6 sm:w-[30px] md:w-[50px]">
+                <h3 class="text-black text-lg md:text-xl font-semibold mb-2">Treinamento de manipulação cosmética, magistral e industrial</h3>
+                <p class="text-sm md:text-base">(reatores, misturadores e fusores)</p>
+            </div>
+        </div>
+    </section>
+
+<!--Seção Soluções -->
+
+    <section class="bg-[#f4f1ec] px-4 py-12 md:px-8 lg:px-16" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#131e3d] text-[28px] md:text-[32px] font-serif font-bold text-center mb-10">
+            SOLUÇÕES PERSONALIZADAS
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-center text-[#666] text-[18px] px-2">
+
+            <div class="bg-white p-4 rounded transition-all duration-300 hover:shadow-lg flex flex-col items-center">
+                <img src="../images/icon-certificacao.png" alt="icon-certificacao" class="w-[50px] h-[50px] mb-2">
+                <h3 class="text-black text-[22px] font-semibold mb-2">Certificações e Auditoria</h3>
+                <p class="mb-2">
+                    Realização de auditorias, fator essencial para a competitividade e credibilidade da sua empresa, incluindo:
+                </p>
+                <span class="text-[16px]">
+                    <p>GMP (Boas Práticas de Fabricação): Alinhamento de segurança e qualidade em toda a cadeia produtiva.</p>
+                </span>
+            </div>
+
+            <div class="bg-white p-4 rounded transition-all duration-300 hover:shadow-lg flex flex-col items-center">
+                <img src="../images/icon-pcp.png" alt="icon-pcp" class="w-[50px] h-[50px] mb-2">
+                <h3 class="text-black text-[22px] font-semibold mb-2">Planejamento e controle de produção (PCP)</h3>
+                <p>
+                    Oferecemos planejamento e controle de produção para otimizar processos industriais. Garantimos eficiência, redução de custos e cumprimento de prazos. Aumente sua produtividade com gestão estratégica e organizada.
+                </p>
+            </div>
+
+            <div class="bg-white p-4 rounded transition-all duration-300 hover:shadow-lg flex flex-col items-center">
+                <img src="../images/icon-eficiencia.png" alt="icon-eficiencia" class="w-[50px] h-[50px] mb-2">
+                <h3 class="text-black text-[22px] font-semibold mb-2">Melhoria de linha de produção</h3>
+                <p>
+                    Aprimoramos linhas de produção com técnicas de Lean Manufacturing e APPCC. Otimizamos processos, eliminamos desperdícios e garantimos segurança. Aumente sua eficiência com qualidade e produtividade contínuas.
+                </p>
+            </div>
+
+            <div class="bg-white p-4 rounded transition-all duration-300 hover:shadow-lg flex flex-col items-center">
+                <img src="../images/icon-validacao.png" alt="icon-validacao" class="w-[50px] h-[50px] mb-2">
+                <h3 class="text-black text-[22px] font-semibold mb-2">Validação de Processos e Produtos</h3>
+                <p>
+                    Realizamos validação de processos, garantindo que cada etapa produtiva opere com segurança, qualidade e eficácia comprovadas. Asseguramos conformidade regulatória através de documentação rigorosa e testes padronizados.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+<!-- Seção Assuntos Regulatórios -->
+
+    <section class="bg-[#f4f1ec] px-6 py-12" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#131e3d] font-serif text-2xl md:text-4xl font-bold text-center mb-6">ASSUNTOS REGULATÓRIOS</h1>
+    
+        <div class="max-w-8xl mx-auto">
+            <div class="text-center text-xl space-y-4 mb-10">
+                <p>Oferecemos suporte completo para a regularização de indústrias de cosméticos, saneantes e farmácias, conforme as exigências dos órgãos reguladores.</p>
+                <p>Atuamos de acordo com a necessidade de cada empresa, assegurando o cumprimento de todas as normas vigentes para garantir uma operação 100% regularizada.</p>
+                <p>Nossa expertise sobre regulamentações garante conformidade total e segurança para o seu negócio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center text-[18px] mx-4 md:mx-8">
+            
+                <div class="flex flex-col justify-center gap-5">
+                    <div class="bg-white font-bold rounded-md p-4 flex items-center justify-center transition duration-300 ease-in-out hover:shadow-md">
+                        <h3 class="text-[22px] text-black">Obtenção de AFE - ANVISA</h3>
+                    </div>
+                    <div class="bg-white font-bold rounded-md p-4 flex items-center justify-center transition duration-300 ease-in-out hover:shadow-md">
+                        <h3 class="text-[22px] text-black">Regularização de produtos</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-md p-4 flex flex-col items-center transition duration-300 ease-in-out hover:shadow-md">
+                    <h3 class="text-[22px] font-bold text-black mb-2">Regularização de empresas</h3>
+                        <p class="mb-2">ANVISA</p>
+                        <p class="mb-2">DIVISA</p>
+                        <p class="mb-2">VISA</p>
+                        <p class="mb-2">MAPA</p>
+                        <p class="mb-2">POLÍCIA FEDERAL</p>
+                </div>
+
+                <div class="bg-white rounded-md p-4 flex flex-col items-center transition duration-300 ease-in-out hover:shadow-md">
+                    <h3 class="text-[22px] font-bold text-black mb-2">Adequações às novas Legislações da ANVISA</h3>
+                    <p class="mb-2">RDC Anvisa nº 951/2024: Migração de regularizações para o peticionamento eletrônico na Anvisa</p>
+                    <p class="mb-2">RDC Anvisa nº 894/2024: Boas Práticas de Cosmetovigilância com monitoramento pós-mercado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Seção Gestão da Garantia da Qualidade -->
+
+    <section class="bg-[#f4f1ec] px-6 py-12 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#131e3d] text-3xl md:text-4xl font-bold font-serif text-center mb-8">GESTÃO DA GARANTIA DA QUALIDADE</h1>
+
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div class="flex flex-col items-center flex-1 bg-white p-6 rounded">
+                <img src="../images/icon_list_check.png" alt="icon-check" class="w-10 h-10 md:w-[50px] md:h-[50px] mb-4" />
+                <div class="text-center">
+                    <p class="text-black text-base md:text-lg">
+                    Realizamos a gestão da garantia da qualidade, assegurando a conformidade em todas as etapas produtivas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center flex-1 bg-white p-6 rounded">
+            <img src="../images/icon_list_check.png" alt="icon-check" class="w-10 h-10 md:w-[50px] md:h-[50px] mb-4" />
+            <div class="text-center">
+                <p class="text-black text-base md:text-lg">
+                Atuamos no controle de qualidade, inspeção de processos, validação de métodos analíticos e liberação de lotes.
+                </p>
+            </div>
+            </div>
+
+            <div class="flex flex-col items-center flex-1 bg-white p-6 rounded">
+            <img src="../images/icon_list_check.png" alt="icon-check" class="w-10 h-10 md:w-[50px] md:h-[50px] mb-4" />
+            <div class="text-center">
+                <p class="text-black text-base md:text-lg">
+                Garantimos rastreabilidade, segurança e eficácia dos produtos, mantendo altos padrões de qualidade e conformidade regulatória.
+                </p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hidden" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+    <h1 class="text-[#cdad7d] text-3xl md:text-4xl font-serif font-bold text-center my-8">NOSSOS CLIENTES</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-5 text-center">
+        
+        <div class="border border-[#dae0e8] bg-white rounded-md p-6 shadow-md">
+        <div class="flex justify-center gap-1 mb-2">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+        </div>
+        <h3 class="font-semibold text-lg mb-2">EMPRESA 1</h3>
+        <p class="text-[18px] text-gray-600">Descrição do item 1. Descrição do item 1. Descrição do item 1. Descrição do item 1.</p>
+        <p class="text-[18px] text-gray-600 mt-2">Nome do cliente</p>
+        </div>
+
+        <div class="border border-[#dae0e8] bg-white rounded-md p-6 shadow-md">
+            <div class="flex justify-center gap-1 mb-2">
+                <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+                <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+                <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+                <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+                <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            </div>
+            <h3 class="font-semibold text-lg mb-2">EMPRESA 2</h3>
+            <p class="text-[18px] text-gray-600">Descrição do item 2. Descrição do item 1. Descrição do item 1. Descrição do item 1.</p>
+            <p class="text-[18px] text-gray-600 mt-2">Nome do cliente</p>
+        </div>
+
+        <div class="border border-[#dae0e8] bg-white rounded-md p-6 shadow-md">
+        <div class="flex justify-center gap-1 mb-2">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+        </div>
+        <h3 class="font-semibold text-lg mb-2">EMPRESA 3</h3>
+        <p class="text-[18px] text-gray-600">Descrição do item 3. Descrição do item 1. Descrição do item 1. Descrição do item 1.</p>
+        <p class="text-[18px] text-gray-600 mt-2">Nome do cliente</p>
+        </div>
+
+        <div class="border border-[#dae0e8] bg-white rounded-md p-6 shadow-md">
+        <div class="flex justify-center gap-1 mb-2">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+            <img class="w-[30px] h-[30px]" src="../images/star.png" alt="Ícone">
+        </div>
+        <h3 class="font-semibold text-lg mb-2">EMPRESA 4</h3>
+        <p class="text-[18px] text-gray-600">Descrição do item 4. Descrição do item 1. Descrição do item 1. Descrição do item 1.</p>
+        <p class="text-[18px] text-gray-600 mt-2">Nome do cliente</p>
+        </div>
+
+    </div>
+    </section>
+
+<!-- Seção QUEM SOMOS -->
+    <section id="quem-somos" data-aos="fade" data-aos-duration="1000" data-aos-delay="50" class="text-center text-gray-600 px-4 py-12 md:px-8">
+        <h1 class="text-[#cdad7d] font-serif text-3xl my-8 font-bold md:text-4xl">QUEM SOMOS</h1>            
+        <div class="bg-white py-12">
+            <h3 class="text-[#131e3d] text-xl font-bold">Laila Soares</h3>
+            <p class="text-[#131e3d] font-semibold">Engenheira Química</p>
+            <p>MSc Engenharia Química</p>
+            <p>MBA Engenharia Cosmética</p>
+            <p>Experiência em Cosméticos e Biocombustíveis</p>
+            <p>Especialista em Produção, Qualidade e Gestão de Processos Industriais</p>
+        </div>
+    </section>
+
+    <section id="missao" data-aos="fade" data-aos-duration="1000" data-aos-delay="50" class="text-center text-gray-600 px-4 py-12 md:px-8">
+        <div class="flex flex-col gap-6 borderrounded-xl mx-4 mt-16 p-6">
+            <div class="bg-[#131e3d] text-white p-4 rounded-md">
+                <h3 class="text-xl font-semibold mb-2">MISSÃO</h3>
+                <p class="text-lg text-center">Desenvolver formulações inovadoras que elevem a performance dos produtos, garantindo qualidade superior e maior 
+                    lucratividade para nossos parceiros, sempre atuando com respeito às legislações e acompanhando todo o processo de produção até 
+                    a entrega do produto final.</p>
+            </div>
+            <div class="bg-[#131e3d] text-white p-4 rounded-md">
+                <h3 class="text-xl font-semibold mb-2">VISÃO</h3>
+                <p class="text-lg text-center">Ser referência nacional em pesquisa e desenvolvimento de formulações, expandindo nossa atuação para o fornecimento de bases e terceirização de produtos, sempre 
+                    na vanguarda das inovações tecnológicas e sustentáveis, entregando soluções de alta qualidade e custo-benefício.</p>
+            </div>
+            <div class="bg-[#131e3d] text-white p-4 rounded-md">
+                <h3 class="text-xl font-semibold mb-2">VALORES</h3>
+                <p class="text-lg text-center">Eficiência: Agir com rapidez e precisão em todas as etapas do desenvolvimento e produção.</p>
+                <p class="text-lg text-center">Respeito: Valorizar cada parceiro e colaborador, promovendo um ambiente de trabalho saudável e inclusivo.</p>
+                <p class="text-lg text-center">Humildade: Manter a mente aberta para aprender e crescer continuamente.</p>
+                <p class="text-lg text-center">Qualidade: Entregar serviços e produtos que atendam e superem as expectativas dos clientes e consumidores finais.</p>
+                <p class="text-lg text-center">Sustentabilidade: Adotar práticas que minimizem impactos ambientais, assegurando uma produção limpa e responsável.</p>
+                <p class="text-lg text-center">Companheirismo: Cultivar uma cultura de apoio mútuo e responsabilidade compartilhada entre equipe e parceiros.</p>
+            </div>
+        </div>
+   
+    </section>
+    
+    <section class="bg-[#f4f1ec] px-6 py-12 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#131e3d] text-3xl md:text-4xl font-bold font-serif text-center mb-8">ENTRE EM CONTATO!</h1>
+
+        <div class="m-5 flex flex-col justify-center md:justify-start gap-4">
+            <div class="flex items-center gap-5 my-5">
+            <img src="../images/icons-whatsapp.png" alt="WhatsApp" class="cursor-pointer" />
+            <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Visitei%20o%20site%20da%20Performance%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-black hover:text-gray-800 cursor-pointer">
+                (71) 98184-2037
+            </a>
+            </div>
+            <div class="flex items-center gap-5 my-5">
+            <img src="../images/icon-instagram.png" alt="Instagram" class="cursor-pointer" />
+            <a href="https://www.instagram.com/performance.consultoria/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-black hover:font-bold cursor-pointer">
+                @performance.consultoria
+            </a>
+            </div>
+            <div class="flex items-center gap-5 my-5">
+            <img src="../images/icon-mail.png" alt="Email" class="cursor-pointer" />
+            <a href="mailto:contato@performanceconsultoria.com" 
+                class="text-black hover:font-bold cursor-pointer">
+                contato@performanceconsultoria.com
+            </a>
+            </div>
+        </div>
+    </section>
+
+
+<footer class="flex justify-end items-center text-white px-5 py-4 bg-[#131e3d]">
+  <div class="w-32 max-w-xs">
+    <img src="../images/performance_logo_horizontal-light_transparent.svg" alt="Logo da Performance" class="w-full h-auto max-w-10" />
+  </div>
+  <div class="text-md">2024 ©</div>
+</footer>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="/src/script.js" defer></script>
+</body>
+</html>
