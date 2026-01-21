@@ -18,11 +18,11 @@
 
 <body class="overflow-auto font-inter m-0 p-0 bg-[#131e3d]">
     <!-- Cabeçalho -->
-    <header class="flex items-center justify-between py-10 h-10 p-4">
+    <header class="flex items-center justify-between py-10 h-10 px-4">
         <div class="logo">
             <img src="../images/performance_logo_horizontal-light_transparent.svg" alt="Logo da Performance" class="w-[300px]" />
         </div>
-        <nav id="menu" class="hidden font-bold gap-6 justify-end md:flex ">
+        <nav id="menu-desktop" class="hidden font-bold gap-6 justify-end md:flex ">
             <a href="#nossos-servicos" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
             hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">NOSSOS SERVIÇOS</a>
             <a href="#quem-somos" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
@@ -30,12 +30,36 @@
             <a href="#contato" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
             hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">CONTATO</a>
         </nav>
-
-        <div id="menu-hamburguer" class="flex flex-col gap-1.5 cursor-pointer md:hidden">
-            <span class="block w-7 h-0.5 bg-white"></span>
-            <span class="block w-7 h-0.5 bg-white"></span>
-            <span class="block w-7 h-0.5 bg-white"></span>
+        <div id="mobile-overlay"
+            class="fixed inset-0 bg-black/50 hidden z-40 md:hidden"
+            aria-hidden="true">
         </div>
+
+        <nav id="menu-mobile"
+            class="fixed top-0 right-0 h-[50%] w-[85%] max-w-[320px] bg-[#131e3d] hidden z-50 md:hidden p-6"
+            aria-label="Menu mobile">
+            <div class="flex items-center justify-between mb-8">
+                <span class="text-[#cdad7d] font-bold text-lg flex ml-4">Menu</span>
+                <button id="close-menu" class="text-white text-2xl" aria-label="Fechar menu">×</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a href="#nossos-servicos" class="px-4 py-3 text-white font-bold rounded-md hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors">
+                NOSSOS SERVIÇOS
+                </a>
+                <a href="#quem-somos" class="px-4 py-3 text-white font-bold rounded-md hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors">
+                QUEM SOMOS
+                </a>
+                <a href="#contato" class="px-4 py-3 text-white font-bold rounded-md hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors">
+                CONTATO
+                </a>
+            </div>
+        </nav>
+
+        <button id="menu-hamburguer" class="flex flex-col gap-1.5 cursor-pointer md:hidden">
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+        </button>
     </header>
 
     <!-- Seção Inicial -->
@@ -338,8 +362,13 @@
 <!-- Seção QUEM SOMOS -->
     <section id="quem-somos" data-aos="fade" data-aos-duration="1000" data-aos-delay="50" class="text-center text-gray-600 px-4 py-12 md:px-8">
         <h1 class="text-[#cdad7d] font-serif text-3xl my-8 font-bold md:text-4xl">QUEM SOMOS</h1>            
-        <div class="bg-white py-12">
+        <div class="bg-[#eeead6] py-12 md:w-[40%] justify-center mx-auto shadow-md border border-black/5 rounded-lg">
             <h3 class="text-[#131e3d] text-xl font-bold">Laila Soares</h3>
+            <img
+                src="../images/laila.png"
+                alt="Foto de Laila Soares"
+                class="my-4 mx-auto w-32 h-32 rounded-full object-cover [object-position:50%_0%] border-4 border-[#cdad7d] shadow-md"
+            />
             <p class="text-[#131e3d] font-semibold">Engenheira Química</p>
             <p>MSc Engenharia Química</p>
             <p>MBA Engenharia Cosmética</p>
@@ -348,42 +377,67 @@
         </div>
     </section>
 
-    <section id="missao" data-aos="fade" data-aos-duration="1000" data-aos-delay="50" class="text-center text-gray-600 px-4 py-12 md:px-8">
-        <div class="flex flex-col gap-6 borderrounded-xl mx-4 mt-16 p-6">
-            <div class="bg-[#131e3d] text-white p-4 rounded-md">
-                <h3 class="text-xl font-semibold mb-2">MISSÃO</h3>
-                <p class="text-lg text-center">Desenvolver formulações inovadoras que elevem a performance dos produtos, garantindo qualidade superior e maior 
-                    lucratividade para nossos parceiros, sempre atuando com respeito às legislações e acompanhando todo o processo de produção até 
-                    a entrega do produto final.</p>
+    <section id="missao" class="bg-[#f4f1ec] px-4 py-14 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-[#131e3d] font-libre text-3xl md:text-4xl font-bold text-center mb-10">
+            MISSÃO, VISÃO E VALORES
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Missão -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+                <div class="flex items-center gap-3 mb-4">
+                <span class="w-10 h-10 rounded-full bg-[#cdad7d] text-white flex items-center justify-center font-bold">★</span>
+                <h3 class="text-[#131e3d] text-xl font-bold">Missão</h3>
+                </div>
+                <p class="text-[#131e3d] text-center md:text-lg leading-relaxed">
+                Desenvolver formulações inovadoras que elevem a performance dos produtos, garantindo qualidade superior e maior
+                lucratividade, com respeito às legislações e acompanhamento do processo até a entrega do produto final.
+                </p>
             </div>
-            <div class="bg-[#131e3d] text-white p-4 rounded-md">
-                <h3 class="text-xl font-semibold mb-2">VISÃO</h3>
-                <p class="text-lg text-center">Ser referência nacional em pesquisa e desenvolvimento de formulações, expandindo nossa atuação para o fornecimento de bases e terceirização de produtos, sempre 
-                    na vanguarda das inovações tecnológicas e sustentáveis, entregando soluções de alta qualidade e custo-benefício.</p>
+
+            <!-- Visão -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+                <div class="flex items-center gap-3 mb-4">
+                <span class="w-10 h-10 rounded-full bg-[#cdad7d] text-white flex items-center justify-center font-bold">★</span>
+                <h3 class="text-[#131e3d] text-xl font-bold">Visão</h3>
+                </div>
+                <p class="text-[#131e3d] text-center md:text-lg leading-relaxed">
+                Ser referência nacional em P&amp;D de formulações, expandindo nossa atuação para o fornecimento de bases e terceirização de produtos, na vanguarda
+                de inovações tecnológicas e sustentáveis, entregando soluções de alta qualidade e custo-benefício.
+                </p>
             </div>
-            <div class="bg-[#131e3d] text-white p-4 rounded-md">
-                <h3 class="text-xl font-semibold mb-2">VALORES</h3>
-                <p class="text-lg text-center">Eficiência: Agir com rapidez e precisão em todas as etapas do desenvolvimento e produção.</p>
-                <p class="text-lg text-center">Respeito: Valorizar cada parceiro e colaborador, promovendo um ambiente de trabalho saudável e inclusivo.</p>
-                <p class="text-lg text-center">Humildade: Manter a mente aberta para aprender e crescer continuamente.</p>
-                <p class="text-lg text-center">Qualidade: Entregar serviços e produtos que atendam e superem as expectativas dos clientes e consumidores finais.</p>
-                <p class="text-lg text-center">Sustentabilidade: Adotar práticas que minimizem impactos ambientais, assegurando uma produção limpa e responsável.</p>
-                <p class="text-lg text-center">Companheirismo: Cultivar uma cultura de apoio mútuo e responsabilidade compartilhada entre equipe e parceiros.</p>
+
+            <!-- Valores -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+                <div class="flex items-center gap-3 mb-4">
+                <span class="w-10 h-10 rounded-full bg-[#cdad7d] text-white flex items-center justify-center font-bold">★</span>
+                <h3 class="text-[#131e3d] text-xl font-bold">Valores</h3>
+                </div>
+
+                <ul class="space-y-3 text-[#131e3d] text-base md:text-lg leading-relaxed">
+                <li><span class="font-semibold">Eficiência:</span> Agir com rapidez e precisão em todas as etapas.</li>
+                <li><span class="font-semibold">Respeito:</span> Valorizar cada parceiro e colaborador, promovendo um ambiente saudável e inclusivo.</li>
+                <li><span class="font-semibold">Humildade:</span> Manter a mente aberta para aprender e crescer continuamente.</li>
+                <li><span class="font-semibold">Qualidade:</span> Entregar serviços e produtos que atendam e superem as expectativas dos clientes e consumidores finais.</li>
+                <li><span class="font-semibold">Sustentabilidade:</span> Adotar práticas que minimizem impactos ambientais, assegurando uma produção limpa e responsável.</li>
+                <li><span class="font-semibold">Companheirismo:</span> Cultivar uma cultura de apoio mútuo e responsabilidade compartilhada.</li>
+                </ul>
+            </div>
             </div>
         </div>
-   
     </section>
     
-    <section class="bg-[#f4f1ec] px-6 py-12 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+    <section id="contato" class="bg-[#f4f1ec] px-6 py-12 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
         <h1 class="text-[#131e3d] text-3xl md:text-4xl font-bold font-serif text-center mb-8">ENTRE EM CONTATO!</h1>
 
-        <div class="m-5 flex flex-col justify-center md:justify-start gap-4">
+        <div class="m-5 flex flex-col justify-center md:justify-start gap-1">
             <div class="flex items-center gap-5 my-5">
             <img src="../images/icons-whatsapp.png" alt="WhatsApp" class="cursor-pointer" />
             <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Visitei%20o%20site%20da%20Performance%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="text-black hover:text-gray-800 cursor-pointer">
+                class="text-black hover:font-bold cursor-pointer">
                 (71) 98184-2037
             </a>
             </div>
