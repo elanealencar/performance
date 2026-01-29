@@ -3,6 +3,8 @@
 
 Este é o projeto de um site institucional para a empresa Performance, que oferece serviços de consultoria especializada para indústrias. O projeto foi desenvolvido utilizando HTML, CSS e Javascript, com foco em um design responsivo, incluindo um menu de navegação para dispositivos móveis.
 
+- [Link do projeto](https://www.performance.com/)
+
 
 ## Tecnologias Utilizadas
 
@@ -21,5 +23,5 @@ Este é o projeto de um site institucional para a empresa Performance, que ofere
 ## Desenvolvido por:
 
 Elane Alencar - Software Developer
-- [Linkedin] (https://www.linkedin.com/in/elanealencar)
-- [Porttólio] (https://portfolio-elanealencar.vercel.app/)
+- [Linkedin](https://www.linkedin.com/in/elanealencar)
+- [Porttólio](https://portfolio-elanealencar.vercel.app/)
