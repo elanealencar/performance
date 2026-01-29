@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso Prático de Adequação à BPF | Performance</title>
+    <meta
+      name="description"
+      content="Curso prático de adequação às Boas Práticas de Fabricação RDC 47 e 48/2013 (ANVISA) para indústrias de cosméticos e saneantes. Boas práticas, fluxo produtivo e preparação para alvará sanitário."
+    />
+
+    <!-- Reaproveita o CSS compilado do Tailwind na raiz do dist -->
+    <link href="../styles.css?v=1" rel="stylesheet" />
+
+    <!-- Fonts (se você já usa no site principal) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.ico"/>
+  </head>
+
+  <body class="font-inter m-0 p-0 bg-[#131e3d] text-white">
+    <!-- Header simples -->
+    <header class="flex items-center justify-between py-10 h-10 px-4">
+        <a class="logo" href="https://www.performanceconsultoria.com/">
+            <img src="../../images/performance_logo_horizontal-light_transparent.svg" alt="Logo da Performance" class="w-[300px]" />
+        </a>
+
+        <nav id="menu-desktop" class="hidden font-bold gap-6 justify-end md:flex ">
+            <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Quero%20me%20inscrever%20no%20curso%20RDC%2047%20e%2048%2F2013." class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+            hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">QUERO ME INSCREVER NO CURSO!</a>
+        </nav>
+        <div id="mobile-overlay"
+            class="fixed inset-0 bg-black/50 hidden z-40 md:hidden"
+            aria-hidden="true">
+        </div>
+
+        <nav id="menu-mobile"
+            class="fixed top-0 right-0 h-[50%] w-[85%] max-w-[320px] bg-[#131e3d] hidden z-50 md:hidden p-6"
+            aria-label="Menu mobile">
+            <div class="flex items-center justify-between mb-8">
+                <span class="text-[#cdad7d] font-bold text-lg flex ml-4">Menu</span>
+                <button id="close-menu" class="text-white text-2xl" aria-label="Fechar menu">×</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Quero%20me%20inscrever%20no%20curso%20RDC%2047%20e%2048%2F2013." class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+                hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">QUERO ME INSCREVER!</a>
+                <a href="https://www.performanceconsultoria.com" class="px-4 py-2 text-white rounded-md cursor-pointer w-[250px] text-center inline-block
+                hover:bg-[#cdad7d] hover:text-[#131e3d] transition-colors duration-300">PÁGINA INICIAL</a>
+            </div>
+        </nav>
+
+        <button id="menu-hamburguer" class="flex flex-col gap-1.5 cursor-pointer md:hidden">
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+            <span class="block w-7 h-0.5 bg-white"></span>
+        </button>
+
+    </header>
+
+    <!-- HERO -->
+    <section>
+      <div class="bg-white text-[#131e3d] max-w-6xl mx-auto px-4 pt-8 mb-8 md:p-14 rounded-lg">
+        <div class="rounded-lg p-6 md:p-10">
+          <div class="flex flex-col gap-4 my-2">
+            <p class="text-[#131e3d] font-bold tracking-wide text-xl text-center">
+              CURSO PRÁTICO DE ADEQUAÇÃO À
+            </p>
+            <p class="text-[#cdad7d] font-bold tracking-wide text-5xl text-center">
+              BOAS PRÁTICAS DE FABRICAÇÃO
+            </p>
+
+            <p class="text-xl md:text-3xl font-bold leading-tight text-center">
+              Fluxo Produtivo e Preparação para Alvará Sanitário
+            </p>
+            <p class="text-xl md:text-2xl font-bold leading-tight text-center mb-8">
+              <i>Indústrias de Cosméticos e Saneantes</i>
+            </p>
+
+            <p class="text-base md:text-lg leading-relaxed text-center">
+              <span class="font-semibold text-lg">Sua empresa está preparada para a próxima inspeção sanitária?</span></br>
+              Em apenas 1 dia, aprenda na prática como atender às exigências da RDC 47 e 48/2013 - ANVISA,
+              organizar processos, estruturar documentação sanitária e se preparar para inspeções e renovação do alvará.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[#f4f1ec] rounded-lg p-6 shadow-md border border-black/5">
+                    <div class="flex flex-row items-start gap-3">
+                        <img 
+                            src="../../images/icon-gps.png"
+                            alt="Ícone" 
+                            style="width:40px;height:40px"
+                            class="mt-2"
+                        />
+                        <div>
+                            <p class="font-semibold mb-2">Presencial em Itabuna - BA</p>
+                            <p class="text-sm">Vagas limitadas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f1ec] rounded-lg p-6 shadow-md border border-black/5">
+                    <div class="flex flex-row items-start gap-3">
+                        <img 
+                            src="../../images/icon-notebook.png"
+                            alt="Ícone" 
+                            style="width:40px;height:40px"
+                            class="mt-2"
+                        />
+                        <div>
+                            <p class="font-semibold mb-2">Online ao vivo</p>
+                            <p class="text-sm">Transmissão em tempo real</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f1ec] rounded-lg p-6 shadow-md border border-black/5">
+                    <div class="flex flex-row items-start gap-3">
+                        <img 
+                            src="../../images/icon-relogio.png"
+                            alt="Ícone" 
+                            style="width:40px;height:40px"
+                            class="mt-2"
+                        />
+                        <div>
+                            <p class="font-semibold mb-2">Intensivo - 8 horas</p>
+                            <p class="text-sm">Conteúdo direto e aplicado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f1ec] rounded-lg p-6 shadow-md border border-black/5">
+                    <div class="flex flex-row items-start gap-3">
+                        <img 
+                            src="../../images/icon-calendario.png"
+                            alt="Ícone" 
+                            style="width:40px;height:40px"
+                            class="mt-2"
+                        />
+                        <div>
+                            <p class="font-semibold mb-2">Endereço e Data</p>
+                            <p class="text-sm">Aguarde a próxima turma!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mt-6">
+              <a
+                href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%20curso%20RDC%2047%20e%2048%2F2013."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-[#131e3d] text-white font-bold px-8 py-4 rounded-md text-center w-full"
+              >
+                Quero garantir minha vaga!
+              </a>
+
+              <a
+                href="#conteudo"
+                class="bg-white/10 border border-white/15 text-[#131e3d] font-bold px-8 py-4 rounded-md text-center hover:bg-white hover:text-[#131e3d] transition-colors"
+              >
+                Ver conteúdo do curso
+              </a>
+            </div>
+
+            <p class="text-white/70 text-sm text-center mt-2">
+              Conteúdo baseado em prática real dentro da indústria — sem excesso de teoria e focado no que a Vigilância Sanitária exige.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE + PARA QUEM -->
+    <section class="bg-[#f4f1ec] text-[#131e3d]">
+      <div class="max-w-6xl mx-auto py-12 md:py-16 grid grid-cols-1 gap-6">
+
+        <div class="text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">Público-alvo</h2>
+          <ul class="space-y-2 text-base md:text-lg">
+            <li>✔ Indústrias de cosméticos e saneantes</li>
+            <li>✔ Empresários do setor</li>
+            <li>✔ Responsáveis Técnicos</li>
+            <li>✔ Gestores de Produção</li>
+            <li>✔ Profissionais da Qualidade</li>
+            <li>✔ Empresas em processo de regularização ou renovação de alvará</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="bg-[#131e3d]">
+      <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+        <h2 class="font-libre text-2xl md:text-4xl font-bold text-[#cdad7d] text-center mb-10">
+          Objetivos do curso
+        </h2>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+          <div class="bg-white/5 border border-white/10 rounded-lg p-5">
+            <div class="text-lg font-bold md:text-lg text-white mb-4">
+              Objetivo geral
+            </div>
+            <p class="mt-3 text-white/90 leading-relaxed">
+              Capacitar as indústrias para atender às Boas Práticas de Fabricação, garantindo conformidade sanitária, organização de processos e preparação para inspeções e renovações do alvará.
+            </p>
+        </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-lg p-5">
+            <div class="text-lg font-bold md:text-lg text-white mb-4">
+              Objetivos específicos
+            </div>
+            <ul class="mt-3 space-y-2 text-white/90 leading-relaxed">
+              <li>✔ Interpretar corretamente a RDC 47 e 48/2013</li>
+              <li>✔ Organizar o fluxo produtivo conforme Boas Práticas</li>
+              <li>✔ Estruturar documentação e registros obrigatórios</li>
+              <li>✔ Preparar a empresa para inspeções sanitárias</li>
+              <li>✔ Reduzir riscos de autuações e interdições</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO PROGRAMÁTICO (accordion por módulos) -->
+    <section id="conteudo" class="bg-[#f4f1ec] text-[#131e3d]">
+      <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+        <h2 class="font-libre text-2xl md:text-4xl font-bold text-center mb-3">
+          Conteúdo programático
+        </h2>
+        <p class="text-center text-[#131e3d]/80 mb-10 mt-2">
+          Clique para expandir cada módulo.
+        </p>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+          <!-- Módulo 1 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 1 - RDC 47 e 48/2013 na prática
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Como interpretar a RDC</li>
+              <li>• O que a RDC 47 e 48/2013 realmente exige da sua empresa</li>
+              <li>• O papel da RDC dentro do licenciamento sanitário</li>
+              <li>• Principais erros que levam à autuação sanitária</li>
+              <li class="mb-2">• Diferença entre estar registrado e estar conforme</li>
+            </ul>
+
+            <div class="mt-5 p-4 rounded-md bg-[#131e3d]/5 border border-black/5">
+              <p class="font-semibold mb-2">Bônus - O que mais gera autuação</p>
+              <ul class="space-y-2 text-[#131e3d]/90 leading-relaxed">
+                <li>• Itens críticos da RDC</li>
+                <li>• Erros mais comuns observados em inspeções</li>
+                <li>• Diferença entre falha pontual e falha sistêmica</li>
+                <li>• Exemplos práticos de não conformidades</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Módulo 2 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 2 - Estrutura física e fluxo produtivo
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Como a Vigilância Sanitária avalia o layout da indústria</li>
+              <li>• Fluxo produtivo correto para evitar não conformidades e contaminações cruzadas</li>
+              <li>• Relação entre layout e Boas Práticas</li>
+              <li>• Erros de fluxo que geram exigências imediatas</li>
+              <li>• Como adaptar o layout sem grandes reformas</li>
+            </ul>
+          </details>
+
+          <!-- Módulo 3 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 3 - Boas Práticas de Fabricação
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Boas Práticas aplicadas à rotina da indústria</li>
+              <li>• Controle de matérias-primas e rastreabilidade</li>
+              <li>• Processos de produção, envase e limpeza</li>
+              <li>• Registros operacionais que não podem faltar</li>
+              <li>• Como evitar falhas repetitivas na produção</li>
+            </ul>
+          </details>
+
+          <!-- Módulo 4 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 4 - Documentação essencial
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Documentos obrigatórios segundo a RDC 47 e 48/2013</li>
+              <li>• POP's que funcionam na prática</li>
+              <li>• Registros exigidos em inspeções</li>
+              <li>• Erros comuns em documentos durante inspeções</li>
+              <li>• Como organizar a documentação para fiscalização</li>
+            </ul>
+          </details>
+
+          <!-- Módulo 5 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 5 - Inspeção sanitária na prática
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Como a Vigilância Sanitária atua</li>
+              <li>• O que o fiscal observa no ambiente e nos documentos</li>
+              <li>• Postura da equipe durante a inspeção</li>
+              <li>• Não conformidades, autos e exigências: como lidar</li>
+              <li>• Como responder à Vigilância de forma técnica</li>
+            </ul>
+          </details>
+
+          <!-- Módulo 6 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 6 - Preparação para renovação do alvará
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Como se preparar para a renovação do alvará</li>
+              <li>• Checklist prático de conformidade sanitária</li>
+              <li>• Autoavaliação da empresa antes da inspeção</li>
+              <li>• Plano de ação para correções sanitárias</li>
+              <li>• Como manter a conformidade ao longo do ano</li>
+            </ul>
+          </details>
+
+          <!-- Módulo 7 -->
+          <details class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+            <summary class="cursor-pointer font-bold text-lg md:text-xl">
+              Módulo 7 (Bônus) - Inspeção como ferramenta de melhoria contínua
+            </summary>
+            <ul class="mt-4 space-y-2 text-[#131e3d]/90 leading-relaxed">
+              <li class="mt-2">• Nova visão sobre a inspeção sanitária</li>
+              <li>• Como usar a inspeção para melhorar processos</li>
+              <li>• Transformar exigências em oportunidades de melhoria</li>
+              <li>• Criação de rotina de autoinspeção</li>
+              <li>• Indicadores simples de conformidade sanitária</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!--SEÇÃO INFORMAÇÕES DO CURSO -->
+    <section class="bg-[#131e3d]">
+      <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+        <h2 class="font-libre text-2xl md:text-4xl font-bold text-[#cdad7d] text-center mb-10">
+          Informações do curso
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Bônus e diferenciais -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+                <div class="flex items-center gap-3 mb-4">    
+                    <img 
+                        src="../../images/icon-presente.png"
+                        alt="Ícone" 
+                        style="width:34px"
+                    />
+                    <h3 class="text-[#131e3d] text-xl font-bold">Bônus na modalidade presencial</h3>
+                </div>
+                <ul class="text-[#131e3d] md:text-lg leading-relaxed">
+                    <li>• Material técnico impresso</li>
+                    <li>• Brinde especial do curso</li>
+                    <li>• Sorteio de uma Auditoria Interna Personalizada (conforme RDC 47 ou 48/2013) com relatório e plano de ação</li>
+                </ul>
+            </div>
+            <!--  O que você recebe ao se inscrever -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-black/5">
+                <div class="flex items-center gap-3 mb-4">
+                    <img 
+                    src="../../images/icon-inscricao.png"
+                    alt="Ícone" 
+                    style="width:34px"
+                    />
+                    <h3 class="text-[#131e3d] text-xl font-bold">O que você recebe ao se inscrever</h3>
+                </div>
+                <ul class="text-[#131e3d] md:text-lg leading-relaxed">
+                    <ul class="mt-3 space-y-2 leading-relaxed">
+                        <li>• Apostila técnica digital</li>
+                        <li>• Checklist de autoinspeção da RDC 47 e 48/2013</li>
+                        <li>• Lista de POPs obrigatórios</li>
+                        <li>• Modelo de plano de ação</li>
+                        <li>• Certificado de participação</li>
+                    </ul>
+                </ul>
+            </div>
+        </div> 
+        <div class="flex justify-center flex-col items-center gap-4">
+            <a
+                href="https://api.whatsapp.com/send/?phone=5571981842037&text=Ol%C3%A1%21+Quero+me+inscrever+no+curso+de%20adequa%C3%A7%C3%A3o%20%C3%A0s%20Boas%20Pr%C3%A1ticas%20de%20Fabrica%C3%A7%C3%A3o.type=phone_number&app_absent=0"
+                target="_blank"
+                class="bg-[#cdad7d] text-white text-xl font-bold mt-12 px-6 py-4 rounded-md hover:bg-white hover:text-[#131e3d] transition-colors w-full md:max-w-[50%] text-center"
+            >
+                Quero me inscrever agora!
+            </a>
+            <p class="text-center text-white/70 text-sm">
+                Vagas presenciais limitadas.
+            </p>
+        </div>
+    </section>
+
+    
+    <section id="contato" class="bg-[#f4f1ec] px-6 py-12 md:px-8" data-aos="fade" data-aos-duration="1000" data-aos-delay="50">
+        <h1 class="text-[#131e3d] text-3xl md:text-4xl font-bold font-serif text-center mb-8">ENTRE EM CONTATO!</h1>
+
+        <div class="m-5 flex flex-col justify-center md:justify-start gap-1">
+            <div class="flex items-center gap-5">
+                <img src="../../images/icons-whatsapp.png" alt="WhatsApp" class="cursor-pointer" />
+                <a href="https://wa.me/5571981842037?text=Ol%C3%A1!%20Visitei%20o%20site%20da%20Performance%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="text-black hover:font-bold cursor-pointer">
+                    (71) 98184-2037
+                </a>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="../../images/icon-instagram.png" alt="Instagram" class="cursor-pointer" />
+                <a href="https://www.instagram.com/performance.consultoria/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="text-black hover:font-bold cursor-pointer">
+                    @performance.consultoria
+                </a>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="../../images/icon-mail.png" alt="Email" class="cursor-pointer" />
+                <a href="mailto:contato@performanceconsultoria.com" 
+                    class="text-black hover:font-bold cursor-pointer">
+                    contato@performanceconsultoria.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="flex justify-end items-center text-white px-5 py-4 bg-[#131e3d]">
+        <div class="w-32 max-w-xs">
+            <img src="../../images/performance_logo_horizontal-light_transparent.svg" alt="Logo da Performance" class="w-full h-auto max-w-10" />
+        </div>
+        <div class="text-md">2024 ©</div>
+    </footer>
+    
+    <script src="../src/script.js" defer></script>
+  </body>
+</html>
