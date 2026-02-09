@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --minify"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elanealencar/performance.git"
