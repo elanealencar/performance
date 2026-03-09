@@ -20,6 +20,27 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.ico"/>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '779156325246633');
+      fbq('track', 'PageView');
+      fbq('track', 'ViewContent', {
+        content_name: 'Curso Prático de Adequação às BPF',
+        content_category: 'Curso'
+      });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=779156325246633&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body class="font-inter m-0 p-0 bg-[#131e3d] text-white">
@@ -76,7 +97,7 @@
             </p>
 
             <p class="text-base md:text-lg leading-relaxed text-center">
-              <span class="font-semibold text-lg">Sua empresa e sua equipe estão preparadas para a próxima inspeção sanitária?</span></br>
+              <span class="font-bold text-lg">Sua empresa e sua equipe estão preparadas para a próxima inspeção sanitária?</span></br>
               Em uma imersão de 1 dia, aprenda na prática como atender às exigências da RDC 47 e 48/2013 - ANVISA,
               organizar processos, estruturar documentação sanitária e se preparar para inspeções e renovação do alvará.
             </p>
@@ -135,7 +156,7 @@
                     <div>
                         <p class="font-semibold mb-2">Data e Endereço da próxima turma</p>
                         <p class="text-sm">11/04/2026, dàs 8h00 às 18h00</p>
-                        <p class="text-sm">Hotel Tarik Fontes - Itabuna/BA</p>
+                        <p class="text-sm">Auditório SEBRAE - Itabuna/BA</p>
                     </div>
                 </div>
               </div>
@@ -373,6 +394,11 @@
           <a
               href="https://pay.hotmart.com/S104110528K"
               target="_blank"
+              onclick="fbq('track', 'InitiateCheckout', {
+                content_name: 'Curso Prático de Adequação às BPF',
+                value: 695.00,
+                currency: 'BRL'
+              });"
               class="bg-[#cdad7d] text-white text-xl font-bold mt-12 px-6 py-4 rounded-md hover:bg-green-800 hover:text-white transition-colors w-full md:max-w-[80%] text-center"
           >
               ➜ Quero me inscrever agora!
